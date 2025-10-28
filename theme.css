@@ -1,5 +1,177 @@
+/* Adjustments for 2K monitors (e.g., 2000px width and above) */
 @media (min-width: 50em) and (orientation: landscape) {
     .overflowPortraitCard {
         max-width: 16.25em
     }
+}
+
+/* Hide item names on mobile */
+.layout-mobile .detailLogo:not(.hide)~.detailPageWrapperContainer .nameContainer h1 {
+    display: none;
+}
+
+
+/*
+================================================================================
+|                          Video Player OSD                                    |
+================================================================================
+*/
+
+
+.videoOsdBottom .osdControls [dir="ltr"] .paper-icon-button-light {
+	position: fixed;
+	top: 49vh;
+	left: 30vw;
+	font-size: 2vw;
+	transition: font-size 0.1s ease-in-out;
+	transform: translateX(-50%) translateY(-50%);
+	background: var(--primary-background-transparent);
+
+}
+
+.videoOsdBottom .btnPreviousTrack:hover,
+.videoOsdBottom .btnPreviousChapter:hover,
+.videoOsdBottom .btnRewind:hover,
+.videoOsdBottom .btnPause:hover,
+.videoOsdBottom .btnFastForward:hover,
+.videoOsdBottom .btnNextChapter:hover,
+.videoOsdBottom .btnNextTrack:hover {
+	font-size: 2.2vw !important;
+	background: var(--secondary-background-transparent) !important;
+
+}
+
+@media (max-width: 33.75em) {
+	.videoOsdBottom .paper-icon-button-light {
+		font-size: 3vw !important;
+	}
+
+	.videoOsdBottom .btnPreviousTrack:hover,
+	.videoOsdBottom .btnPreviousChapter:hover,
+	.videoOsdBottom .btnRewind:hover,
+	.videoOsdBottom .btnPause:hover,
+	.videoOsdBottom .btnFastForward:hover,
+	.videoOsdBottom .btnNextChapter:hover,
+	.videoOsdBottom .btnNextTrack:hover {
+		font-size: 3.2vw !important;
+		background: var(--secondary-background-transparent) !important;
+
+	}
+}
+
+.osdControls .btnPreviousTrack {
+	left: 20% !important;
+	filter: drop-shadow(-3px 0px 2px rgba(2, 2, 2, 0.8));
+}
+
+.osdControls .btnPreviousChapter {
+	left: 30% !important;
+	filter: drop-shadow(-3px 0px 2px rgba(2, 2, 2, 0.8));
+}
+
+.osdControls .btnRewind {
+	left: 40% !important;
+	filter: drop-shadow(-3px 0px 2px rgba(2, 2, 2, 0.8));
+}
+
+.osdControls .btnPause {
+	left: 50% !important;
+	filter: drop-shadow(0px 0px 3px rgba(2, 2, 2, 0.8));
+}
+
+.osdControls .btnFastForward {
+	left: 60% !important;
+	filter: drop-shadow(3px 0px 2px rgba(2, 2, 2, 0.8));
+}
+
+.osdControls .btnNextChapter {
+	left: 70% !important;
+	filter: drop-shadow(3px 0px 2px rgba(2, 2, 2, 0.8));
+}
+
+.osdControls .btnNextTrack {
+	left: 80% !important;
+	filter: drop-shadow(3px 0px 2px rgba(2, 2, 2, 0.8));
+}
+
+.osdTimeText {
+	margin-left: 2.4em;
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.videoOsdBottom .paper-icon-button-light:hover:not(:disabled) {
+		background-color: #0009 !important;
+	}
+}
+
+/* ----------------------------------------------------------- */
+
+/* Card playbutton styling */
+.cardOverlayContainer>.cardOverlayFab-primary {
+    background-color: var(--primary-accent-color) !important;
+    color: var(--text-color) !important;
+    font-size: 80% !important;
+    z-index: 2;
+    margin-left: unset;
+    margin-top: unset;
+    top: unset;
+    left: 1em;
+    bottom: 1em;
+}
+
+/* Blur the card upon hovering on play button */
+.cardOverlayContainer:has(.cardOverlayButton:hover) {
+    backdrop-filter: blur(5px) !important;
+}
+
+/* Nice animations on hover from elegantfin */
+.card.card-hoverable .cardOverlayContainer:after {
+    content: '';
+    transition: .5s;
+    position: absolute;
+    inset: 0;
+    transform: translateY(-50%) translateX(0);
+    background: linear-gradient(0deg, transparent, var(--primary-accent-color) 45%, var(--secondary-accent-color) 55%, transparent) !important;
+}
+
+.card.card-hoverable:hover .cardOverlayContainer:after {
+    transform: translateY(50%) translateX(0) !important;
+    opacity: 0.5;
+}
+
+
+/* Banners on Collections */
+.verticalSection .cardImageContainer::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 25%;
+  max-width: 10em;
+  aspect-ratio: 1/1;
+  pointer-events: none;
+  z-index: 6;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.verticalSection.OSCARS .cardImageContainer::after {
+  background-image: url('https://github.com/jackkerouac/aphrodite/blob/main/images/awards/yellow/oscars.png?raw=true');
+}
+
+.verticalSection.IMDB_250 .cardImageContainer::after {
+  background-image: url('https://github.com/jackkerouac/aphrodite/blob/main/images/awards/yellow/imdb.png?raw=true');
+}
+
+
+button.headerButton.headerHomeButton.barsMenuButton.headerButtonLeft.paper-icon-button-light {
+    order: -1;
+}
+
+button.headerButton.headerButtonLeft.headerBackButton.paper-icon-button-light {
+    order: -2;
+}
+button.headerButton.mainDrawerButton.barsMenuButton.headerButtonLeft.paper-icon-button-light {
+  order: -3;
 }
