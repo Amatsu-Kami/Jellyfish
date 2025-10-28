@@ -1,0 +1,48 @@
+/* Logo */
+:root {
+    --logo: url(https://jellyfin.org/images/logo.svg);
+}
+
+/* Manual Login and Forgot Password */
+#loginPage .raised.cancel.block.btnManual.emby-button,
+#loginPage .raised.cancel.block.btnForgotPassword.emby-button {
+    display: block;
+    background-color: var(--primary-accent-color) !important;
+}
+#loginPage .raised.cancel.block.btnManual.emby-button:hover,
+#loginPage .raised.cancel.block.btnForgotPassword.emby-button:hover {
+    background-color: var(--secondary-accent-color) !important;
+}
+
+/* Authentik Button */
+#loginPage .loginDisclaimer {
+    height: 100%;
+    width: 100%;
+}
+#loginPage .raised.cancel.block.btnSSO.emby-button {
+    background-color: var(--primary-accent-color) !important;
+}
+#loginPage .raised.cancel.block.btnSSO.emby-button:hover {
+    background-color: var(--secondary-accent-color) !important;
+}
+
+/* Remember me*/
+#loginPage .checkboxLabel::after {
+    content: "Remember me";
+}
+
+/* Custom text and styling for the "Sign In" (submit) button. */
+#loginPage button.emby-button[type="submit"] span::after {
+  content: "Sign in" !important;
+}
+#loginPage button.emby-button[type="submit"] {
+  background-color: var(--secondary-accent-color) !important;
+}
+#loginPage button.emby-button[type="submit"]:hover {
+  background-color: var(--primary-accent-color) !important;
+}
+
+/* Custom text and styling for the "Cancel" button. */
+#loginPage button.emby-button[type="button"].btnCancel span::after {
+  content: "Cancel" !important;
+}
