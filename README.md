@@ -21,6 +21,7 @@ To apply a theme globally to all users via the Dashboard:
 
 ```css
    @import url("https://cdn.jsdelivr.net/gh/Amatsu-Kami/jellyfish@main/loginPage.css");
+   @import url("https://cdn.jsdelivr.net/gh/Amatsu-Kami/jellyfish@main/theme.css");
    /* Any other imports or custom CSS will go here */
 ```
 3.  **Save Changes**
@@ -40,6 +41,7 @@ Individual users can apply the theme to their own account without affecting othe
 
 ```css
    @import url("https://cdn.jsdelivr.net/gh/Amatsu-Kami/jellyfish@main/loginPage.css");
+   @import url("https://cdn.jsdelivr.net/gh/Amatsu-Kami/jellyfish@main/theme.css");
 ```
 
 3.  **Save and Refresh**
