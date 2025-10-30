@@ -1,6 +1,16 @@
-/* ============================= */
+/* Adjustments for 2K monitors (e.g., 2000px width and above) */
+@media (min-width: 50em) and (orientation: landscape) {
+    .overflowPortraitCard {
+        max-width: 16.25em
+    }
+}
+
+/* Hide item names on mobile */
+.layout-mobile .detailLogo:not(.hide)~.detailPageWrapperContainer .nameContainer h1 {
+    display: none;
+}
+
 /* Adjust film and series logos/covers (PC-specific) */
-/* ============================= */
 /* PC/Desktop: max 200px width */
 @media (min-width: 601px) {
 	.cardImage img,
@@ -24,9 +34,7 @@
 	}
 }
 
-/* ============================= */
 /* Logos of the interface (Admin, Page Title) - Valid for all devices */
-/* ============================= */
 .adminDrawerLogo img {
 	max-width: 150px !important;
 	max-height: 60px !important;
@@ -44,9 +52,7 @@
 	height: 80px !important;
 }
 
-/* ============================= */
 /* Logos of the detail page (PC-specific) */
-/* ============================= */
 /* PC/Desktop: Flex centering and general size adjustment */
 @media (min-width: 601px) {
 	.detailLogo,
