@@ -104,11 +104,6 @@
     color: var(--text-color) !important;
     font-size: 80% !important;
     z-index: 2;
-    margin-left: unset;
-    margin-top: unset;
-    top: unset;
-    left: 1em;
-    bottom: 1em;
 }
 
 /* Blur the card upon hovering on play button */
