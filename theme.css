@@ -1,15 +1,7 @@
-/* Adjustments for 2K monitors (e.g., 2000px width and above) */
-@media (min-width: 50em) and (orientation: landscape) {
-    .overflowPortraitCard {
-        max-width: 16.25em
-    }
+/* Logo */
+:root {
+    --logo: url(https://jellyfin.org/images/logo.svg);
 }
-
-/* Hide item names on mobile */
-.layout-mobile .detailLogo:not(.hide)~.detailPageWrapperContainer .nameContainer h1 {
-    display: none;
-}
-
 
 /*
 ================================================================================
