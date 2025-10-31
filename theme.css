@@ -67,3 +67,8 @@ button.headerButton.headerButtonLeft.headerBackButton.paper-icon-button-light {
 button.headerButton.mainDrawerButton.barsMenuButton.headerButtonLeft.paper-icon-button-light {
   order: -3;
 }
+
+/* Show watched and favorite buttons on card hover */
+.cardOverlayButtonIcon:is(.playstatebutton-icon-unplayed, .playstatebutton-icon-played, .favorite) {
+    display: flex !important;
+}
